@@ -1,13 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+// Implements Frequency table into a Biary Heap
 
-/**
- *
- * @author Joel
- */
-public class binaryHeap {
+import java.util.*;
+
+public class binaryHeap 
+{
+    public void callBinaryHeap (int[] freqTable)
+    {
+        ArrayList<TreeNode> arrayList = new ArrayList<TreeNode>();
+        TreeNode t1, t2, t3;
+        
+        for (int i = 0; i < freqTable.length; i++)
+        {
+            arrayList.add(new TreeNode(freqTable[i], i));
+        }
+        
+        build_heap(freqTable);
+    }
+    
     
 }
